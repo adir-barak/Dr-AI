@@ -38,7 +38,7 @@ export const SideNavItem = (props) => {
             backgroundColor: 'rgba(255, 255, 255, 0.04)'
           }
         }}
-        {...linkProps}
+        {...linkProps} 
       >
         {icon && (
           <Box

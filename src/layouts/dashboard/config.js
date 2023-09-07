@@ -1,84 +1,84 @@
-import ChartBarIcon from '@heroicons/react/24/solid/ChartBarIcon';
-import CogIcon from '@heroicons/react/24/solid/CogIcon';
-import LockClosedIcon from '@heroicons/react/24/solid/LockClosedIcon';
-import ShoppingBagIcon from '@heroicons/react/24/solid/ShoppingBagIcon';
-import UserIcon from '@heroicons/react/24/solid/UserIcon';
-import UserPlusIcon from '@heroicons/react/24/solid/UserPlusIcon';
-import UsersIcon from '@heroicons/react/24/solid/UsersIcon';
-import XCircleIcon from '@heroicons/react/24/solid/XCircleIcon';
-import { SvgIcon } from '@mui/material';
+import ChartBarIcon from "@heroicons/react/24/solid/ChartBarIcon";
+import CubeTransparentIcon from "@heroicons/react/24/solid/CubeTransparentIcon";
+import EyeDropperIcon from "@heroicons/react/24/solid/EyeDropperIcon";
+import TableCellsIcon from "@heroicons/react/24/solid/TableCellsIcon";
+import UserIcon from "@heroicons/react/24/solid/UserIcon";
+import UserPlusIcon from "@heroicons/react/24/solid/UserPlusIcon";
+import UsersIcon from "@heroicons/react/24/solid/UsersIcon";
+import XCircleIcon from "@heroicons/react/24/solid/XCircleIcon";
+import { SvgIcon } from "@mui/material";
 
 export const items = [
   {
-    title: 'Overview',
-    path: '/',
+    title: "Overview",
+    path: "",
     icon: (
       <SvgIcon fontSize="small">
         <ChartBarIcon />
       </SvgIcon>
-    )
+    ),
   },
   {
-    title: 'Customers',
-    path: '/customers',
-    icon: (
-      <SvgIcon fontSize="small">
-        <UsersIcon />
-      </SvgIcon>
-    )
-  },
-  {
-    title: 'Companies',
-    path: '/companies',
-    icon: (
-      <SvgIcon fontSize="small">
-        <ShoppingBagIcon />
-      </SvgIcon>
-    )
-  },
-  {
-    title: 'Account',
-    path: '/account',
+    title: "Appointment",
+    path: "",
     icon: (
       <SvgIcon fontSize="small">
         <UserIcon />
       </SvgIcon>
-    )
+    ),
   },
   {
-    title: 'Settings',
-    path: '/settings',
+    title: "Discharge Letter",
+    path: "/companies",
     icon: (
       <SvgIcon fontSize="small">
-        <CogIcon />
+        <TableCellsIcon />
       </SvgIcon>
-    )
+    ),
   },
   {
-    title: 'Login',
-    path: '/auth/login',
+    title: "Patients",
+    path: "",
     icon: (
       <SvgIcon fontSize="small">
-        <LockClosedIcon />
+        <UsersIcon />
       </SvgIcon>
-    )
+    ),
   },
   {
-    title: 'Register',
-    path: '/auth/register',
+    title: "Analysis",
+    path: "",
+    icon: (
+      <SvgIcon fontSize="small">
+        <CubeTransparentIcon />
+      </SvgIcon>
+    ),
+  },
+  {
+    title: "Medication",
+    path: "",
+    icon: (
+      <SvgIcon fontSize="small">
+        <EyeDropperIcon />
+      </SvgIcon>
+    ),
+  },
+  {
+    title: "Check-In",
+    path: "",
     icon: (
       <SvgIcon fontSize="small">
         <UserPlusIcon />
       </SvgIcon>
-    )
+    ),
   },
   {
-    title: 'Error',
-    path: '/404',
+    title: "Logout",
+    path: "",
     icon: (
       <SvgIcon fontSize="small">
         <XCircleIcon />
       </SvgIcon>
-    )
-  }
+    ),
+  },
 ];
