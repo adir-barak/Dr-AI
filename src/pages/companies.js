@@ -98,9 +98,7 @@ const Page = () => {
           <Stack spacing={3}>
             <Stack direction="row" justifyContent="space-between" spacing={4}>
               <Stack spacing={1}>
-                <Typography variant="h4">
-                  Write a new discharge letter
-                </Typography>
+                {/* <Typography variant="h4">Write a new discharge letter</Typography> */}
                 <Stack alignItems="center" direction="row" spacing={1}>
                   {/* <Button
                   color="inherit"
@@ -142,9 +140,13 @@ const Page = () => {
                 display: "flex",
                 justifyContent: "center",
                 flexBasis: "50%",
+                flexDirection: "column",
+                alignItems: "center",
+                rowGap: "25px",
               }}
             >
-              <CompaniesSearch companies={companiesData} setCompanies={setCompanies} />
+              <Typography variant="h4">Write a new discharge letter</Typography>
+              <CompaniesSearch companiesData={companiesData} setCompanies={setCompanies} />
             </Box>
 
             <Grid container spacing={3}>

@@ -82,10 +82,10 @@ export const Layout = (props) => {
               Welcome back{' '}
               <Box
                 component="a"
-                sx={{ color: '#15B79E' }}
+                sx={{ color: '#87b6f5' }}
                 target="_blank"
               >
-                Dr. Moshal
+                Dr. Moshal 
               </Box>
             </Typography>
             <Typography
@@ -97,7 +97,7 @@ export const Layout = (props) => {
             </Typography>
             <img
               alt=""
-              src="/assets/auth-illustration.svg"
+              src="/assets/auth-illustration.png"
             />
           </Box>
         </Grid>

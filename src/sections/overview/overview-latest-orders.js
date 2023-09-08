@@ -19,9 +19,9 @@ import { Scrollbar } from 'src/components/scrollbar';
 import { SeverityPill } from 'src/components/severity-pill';
 
 const statusMap = {
-  pending: 'warning',
-  delivered: 'success',
-  refunded: 'error'
+  present: 'warning',
+  released: 'success',
+  absent: 'error'
 };
 
 export const OverviewLatestOrders = (props) => {
@@ -29,20 +29,20 @@ export const OverviewLatestOrders = (props) => {
 
   return (
     <Card sx={sx}>
-      <CardHeader title="Latest Orders" />
+      <CardHeader title="Next Appointments" />
       <Scrollbar sx={{ flexGrow: 1 }}>
         <Box sx={{ minWidth: 800 }}>
           <Table>
             <TableHead>
               <TableRow>
                 <TableCell>
-                  Order
+                  ID
                 </TableCell>
                 <TableCell>
-                  Customer
+                  Patient
                 </TableCell>
                 <TableCell sortDirection="desc">
-                  Date
+                  Last visit
                 </TableCell>
                 <TableCell>
                   Status

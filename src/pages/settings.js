@@ -8,7 +8,7 @@ const Page = () => (
   <>
     <Head>
       <title>
-        Settings | Devias Kit
+        Template | MI
       </title>
     </Head>
     <Box
@@ -21,7 +21,7 @@ const Page = () => (
       <Container maxWidth="lg">
         <Stack spacing={3}>
           <Typography variant="h4">
-            Settings
+          Template | Myocardial Infarction (MI)
           </Typography>
           <SettingsNotifications />
           <SettingsPassword />
