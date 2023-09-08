@@ -1,4 +1,6 @@
-import { useCallback } from "react";
+import { useCallback, useState, useEffect } from "react";
+import { useRouter } from "next/router";
+
 import {
   Button,
   Card,
@@ -11,37 +13,27 @@ import {
   Stack,
   Typography,
   Unstable_Grid2 as Grid,
+  Box,
 } from "@mui/material";
 
-const preCompletionStyle = {
-  padding: "2px",
-  backgroundColor: "rgb(247,247,247)",
-  border: "1px solid rgb(174,174,174)",
-  // borderRadius: "18%",
-  color: "rgb(247,247,247)",
-  "&:hover": {
-    color: "rgb(174,174,174)",
-  },
-};
+export const SettingsNotifications = (props) => {
+  const router = useRouter(); // Initialize useRouter within your component
 
-const atCompletionStyle = {
-  padding: "2px",
-  backgroundColor: "rgb(247,247,247)",
-  border: "1px solid rgb(174,174,174)",
-  // borderRadius: "18%",
-  color: "rgb(174,174,174)",
-};
-
-export const SettingsNotifications = () => {
   const handleSubmit = useCallback((event) => {
     event.preventDefault();
   }, []);
 
-  const handleCompletion = (event) => {
-    if (event.key === "Tab" || event.key === "Enter") {
-      // Call your function when Tab or Enter is pressed
-      event.target.style = { atCompletionStyle };
-    }
+  const [isLoading, setIsLoading] = useState(false);
+
+  const loading = () => {
+    setIsLoading(true);
+
+    setTimeout(() => {
+      setIsLoading(false);
+
+      // Route to "/" after 2 seconds
+      router.push("/");
+    }, 2000);
   };
 
   return (
@@ -68,13 +60,25 @@ export const SettingsNotifications = () => {
             <Divider sx={{ width: "22%" }} />
             Mr. Smith presented to the emergency department with complaints of severe chest pain
             that had been ongoing for the past{" "}
-            <span tabIndex="1" style={preCompletionStyle} onKeyDown={handleCompletion}>
+            <span
+              tabIndex="1"
+              style={props.preCompletionStyle}
+              onKeyDown={props.handleCompletion}
+              onFocus={props.handleFocus}
+              className="completion-span"
+            >
               2
             </span>{" "}
             hours. He described the pain as a crushing sensation in his chest that radiated to his
             left arm. He also reported associated symptoms of shortness of breath and diaphoresis.
             <br />
-            <span tabIndex="2" style={preCompletionStyle} onKeyDown={handleCompletion}>
+            <span
+              tabIndex="2"
+              style={props.preCompletionStyle}
+              onKeyDown={props.handleCompletion}
+              onFocus={props.handleFocus}
+              className="completion-span"
+            >
               Additionally, he complained of general weakness and fatigue over the past week.
             </span>
             <br />
@@ -83,19 +87,43 @@ export const SettingsNotifications = () => {
             <Divider />
             Upon admission, Mr. Smith appeared distressed and diaphoretic. Vital signs revealed a
             blood pressure of{" "}
-            <span tabIndex="3" style={preCompletionStyle} onKeyDown={handleCompletion}>
+            <span
+              tabIndex="3"
+              style={props.preCompletionStyle}
+              onKeyDown={props.handleCompletion}
+              onFocus={props.handleFocus}
+              className="completion-span"
+            >
               160/190
             </span>{" "}
             mmHg, heart rate of{" "}
-            <span tabIndex="4" style={preCompletionStyle} onKeyDown={handleCompletion}>
+            <span
+              tabIndex="4"
+              style={props.preCompletionStyle}
+              onKeyDown={props.handleCompletion}
+              onFocus={props.handleFocus}
+              className="completion-span"
+            >
               100
             </span>{" "}
             bpm, respiratory rate of{" "}
-            <span tabIndex="5" style={preCompletionStyle} onKeyDown={handleCompletion}>
+            <span
+              tabIndex="5"
+              style={props.preCompletionStyle}
+              onKeyDown={props.handleCompletion}
+              onFocus={props.handleFocus}
+              className="completion-span"
+            >
               20
             </span>{" "}
             breaths per minute, and oxygen saturation of{" "}
-            <span tabIndex="6" style={preCompletionStyle} onKeyDown={handleCompletion}>
+            <span
+              tabIndex="6"
+              style={props.preCompletionStyle}
+              onKeyDown={props.handleCompletion}
+              onFocus={props.handleFocus}
+              className="completion-span"
+            >
               95%
             </span>{" "}
             on room air. Cardiac auscultation revealed normal heart sounds with no murmurs or
@@ -106,13 +134,25 @@ export const SettingsNotifications = () => {
             Diagnostic Findings:
             <Divider sx={{ width: "22%" }} />
             1. Electrocardiogram (ECG) showed{" "}
-            <span tabIndex="8" style={preCompletionStyle} onKeyDown={handleCompletion}>
+            <span
+              tabIndex="7"
+              style={props.preCompletionStyle}
+              onKeyDown={props.handleCompletion}
+              onFocus={props.handleFocus}
+              className="completion-span"
+            >
               ST-segment elevation in leads II, III, aVF, and V2-V6, consistent with an acute
               myocardial infarction (MI).
             </span>
             <br />
             2. Troponin levels were{" "}
-            <span tabIndex="9" style={preCompletionStyle} onKeyDown={handleCompletion}>
+            <span
+              tabIndex="8"
+              style={props.preCompletionStyle}
+              onKeyDown={props.handleCompletion}
+              onFocus={props.handleFocus}
+              className="completion-span"
+            >
               elevated at 0.12ng/mL, confirming myocardial damage.
             </span>
             <br />
@@ -127,7 +167,13 @@ export const SettingsNotifications = () => {
             catheterization, which revealed a significant occlusion in the left anterior descending
             (LAD) coronary artery. Percutaneous coronary intervention (PCI) was performed
             successfully, and a drug-eluting stent was placed in the LAD.{" "}
-            <span tabIndex="10" style={preCompletionStyle} onKeyDown={handleCompletion}>
+            <span
+              tabIndex="9"
+              style={props.preCompletionStyle}
+              onKeyDown={props.handleCompletion}
+              onFocus={props.handleFocus}
+              className="completion-span"
+            >
               Throughout his hospitalization, Mr. Smith received appropriate antiplatelet therapy,
               statin medication, and antihypertensive agents to manage his comorbidities.
             </span>{" "}
@@ -148,7 +194,13 @@ export const SettingsNotifications = () => {
             Mr. Smith was discharged in stable condition on aspirin, clopidogrel, atorvastatin,
             lisinopril, and metoprolol. He was advised to follow up with his cardiologist in one
             week and continue cardiac rehabilitation as prescribed.{" "}
-            <span tabIndex="11" style={preCompletionStyle} onKeyDown={handleCompletion}>
+            <span
+              tabIndex="10"
+              style={props.preCompletionStyle}
+              onKeyDown={props.handleCompletion}
+              onFocus={props.handleFocus}
+              className="completion-span"
+            >
               Throughout his hospitalization, Mr. Smith received appropriate antiplatelet therapy,
               statin medication, and antihypertensive agents to manage his comorbidities.
             </span>{" "}
@@ -200,9 +252,30 @@ export const SettingsNotifications = () => {
           </Grid>
         </CardContent> */}
         <Divider />
-        <CardActions sx={{ justifyContent: "flex-end" }}>
-          <Button variant="contained">Save</Button>
-        </CardActions>
+        <Box sx={{ display: "flex", justifyContent: "end", flexDirection: "row" }}>
+          <CardActions sx={{ justifyContent: "flex-end" }}>
+            <div>
+              <img
+                style={{ visibility: isLoading ? "visible" : "hidden", width: "65px" }}
+                src="/assets/spinner.gif"
+                alt="Loading..."
+              />
+              {/* {isLoading ? (
+                
+              ) : (
+                <div></div>
+              )} */}
+            </div>
+            <Button onClick={loading} variant="contained">
+              Print
+            </Button>
+          </CardActions>
+          <CardActions sx={{ justifyContent: "flex-end" }}>
+            <Button onClick={loading} variant="contained">
+              Send
+            </Button>
+          </CardActions>
+        </Box>
       </Card>
     </form>
   );
