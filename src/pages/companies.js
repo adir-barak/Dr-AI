@@ -26,7 +26,7 @@ const companiesData = [
     logo: "/assets/logos/logo-dropbox.png",
     title: "Myocardial Infarction (MI)",
     tags: "chest pain%chest pains%heart attack%mi",
-    downloads: "92%",
+    downloads: "92",
   },
   {
     id: "ed2b900870ceba72d203ec15",
@@ -36,7 +36,7 @@ const companiesData = [
     logo: "/assets/logos/logo-medium.png",
     title: "Gastroesophageal Reflux Disease (GERD)",
     tags: "chest pain%chest pains%gastroesophageal reflux diseasek%gerd",
-    downloads: "84%",
+    downloads: "84",
   },
   {
     id: "a033e38768c82fca90df3db7",
@@ -46,7 +46,7 @@ const companiesData = [
     logo: "/assets/logos/logo-slack.png",
     title: "Appendicitis",
     tags: "abdominal pain%abdominal pains%appendicitis",
-    downloads: "70%",
+    downloads: "70",
   },
   {
     id: "1efecb2bf6a51def9869ab0f",
@@ -56,7 +56,7 @@ const companiesData = [
     logo: "/assets/logos/logo-lyft.png",
     title: "Allergic Reaction",
     tags: "allergic reaction",
-    downloads: "44%",
+    downloads: "44",
   },
   {
     id: "1ed68149f65fbc6089b5fd07",
@@ -66,7 +66,7 @@ const companiesData = [
     logo: "/assets/logos/logo-github.png",
     title: "Pneumonia",
     tags: "fever%pneumonia%cold",
-    downloads: "35%",
+    downloads: "35",
   },
   {
     id: "5dab321376eff6177407e887",
@@ -76,7 +76,7 @@ const companiesData = [
     logo: "/assets/logos/logo-squarespace.png",
     title: "Severe Burns",
     tags: "%severe burns",
-    downloads: "16%",
+    downloads: "16",
   },
 ];
 

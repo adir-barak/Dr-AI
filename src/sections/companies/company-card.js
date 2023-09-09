@@ -57,7 +57,7 @@ export const CompanyCard = (props) => {
             <ClockIcon />
           </SvgIcon>
           <Typography color="text.secondary" display="inline" variant="body2">
-            Last used 1 min ago
+            Used {(Number(company.downloads) % 21) + 1} hours ago
           </Typography>
         </Stack>
         <Stack alignItems="center" direction="row" spacing={1}>
@@ -66,7 +66,7 @@ export const CompanyCard = (props) => {
           </SvgIcon>
 
           <Typography color="text.secondary" display="inline" variant="body2">
-            Match Rate: {company.downloads}
+            Match Rate: {company.downloads}%
           </Typography>
         </Stack>
       </Stack>
