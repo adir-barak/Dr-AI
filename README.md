@@ -43,7 +43,7 @@ a prototype for an A.I assistant that streamlines the generation of discharge le
    
 
    <div align="center">
-   <a href="https://ibb.co/n1ypdVj"><img src="https://i.ibb.co/FY1pZfz/Dr-AI-quick-demo.gif" alt="Dr-AI-quick-demo" border="0"></a>
+   <a href="https://ibb.co/n1ypdVj">Demo GIF</a>
    </div>
 
 ---
