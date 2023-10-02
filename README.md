@@ -8,10 +8,10 @@
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style&logo=JavaScript&logoColor=black" alt="JavaScript" />
 <img src="https://img.shields.io/badge/React-61DAFB.svg?style&logo=React&logoColor=black" alt="React" />
 </p>
-<img src="https://img.shields.io/github/languages/top/ArieLevental/Dr.AI?style&color=5D6D7E" alt="GitHub top language" />
-<img src="https://img.shields.io/github/languages/code-size/ArieLevental/Dr.AI?style&color=5D6D7E" alt="GitHub code size in bytes" />
-<img src="https://img.shields.io/github/commit-activity/m/ArieLevental/Dr.AI?style&color=5D6D7E" alt="GitHub commit activity" />
-<img src="https://img.shields.io/github/license/ArieLevental/Dr.AI?style&color=5D6D7E" alt="GitHub license" />
+<img src="https://img.shields.io/github/languages/top/adir-barak/Dr-AI?style&color=5D6D7E" alt="GitHub top language" />
+<img src="https://img.shields.io/github/languages/code-size/adir-barak/Dr-AI?style&color=5D6D7E" alt="GitHub code size in bytes" />
+<img src="https://img.shields.io/github/commit-activity/m/adir-barak/Dr-AI?style&color=5D6D7E" alt="GitHub commit activity" />
+<img src="https://img.shields.io/github/license/adir-barak/Dr-AI?style&color=5D6D7E" alt="GitHub license" />
 </div>
 
 >
@@ -51,7 +51,7 @@ a prototype for an A.I assistant that streamlines the generation of discharge le
 
 ## 🚀 Getting Started
 
-repo: `git clone https://github.com/adir-barak/Dr.AI.git`
+repo: `git clone https://github.com/adir-barak/Dr-AI.git`
 
   
 
